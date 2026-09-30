@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { DashboardButton, DashboardFooter, DashboardHeader, DashboardIcon, DashboardStatCard, GlassPanel } from "../../../components/dashboard-ui";
 
 type Delivery = { id: string; status: "In Transit" | "Docked" | "Completed"; badge: string; category: string; time: string; note: string; vehicle: string; items: string; bay: string; detail: string; action: string; icon: "delayed" | "approaching" | "delivered"; color: "orange" | "blue" | "green" };
@@ -22,10 +23,11 @@ function DeliveryCard({ delivery, onAction }: { delivery: Delivery; onAction: (t
 function SectionTitle({ title, subtitle, side }: { title: string; subtitle?: string; side?: React.ReactNode }) { return <div className="flex items-start justify-between gap-2"><div><h2 className="text-[14px] font-extrabold leading-5 tracking-[-.35px] text-[#0f172a]">{title}</h2>{subtitle && <p className="mt-0.5 max-w-[220px] text-[11px] leading-4 text-[#64748b]">{subtitle}</p>}</div>{side}</div>; }
 
 export default function DashboardScreen() {
+  const router = useRouter();
   const [filter, setFilter] = useState("All"); const [search, setSearch] = useState(""); const [active, setActive] = useState("Dashboard"); const [dialog, setDialog] = useState(""); const [toast, setToast] = useState("");
   const filtered = useMemo(() => deliveries.filter(d => (filter === "All" || d.status === filter) && `${d.id} ${d.vehicle} ${d.category}`.toLowerCase().includes(search.toLowerCase())), [filter, search]);
   const open = (title: string) => setDialog(title);
-  const navigate = (section: string) => { setActive(section); if (section !== "Dashboard") open(section); };
+  const navigate = (section: string) => { if (section === "Orders") { router.push("/store-manager/Orders%20%26%20Order%20Detail"); return; } setActive(section); if (section !== "Dashboard") open(section); };
   const acknowledge = () => { setToast(`${dialog} saved in this demo`); setDialog(""); window.setTimeout(() => setToast(""), 4500); };
   return <main className="dashboard-stage min-h-screen px-3 py-5 text-[#0f172a] sm:px-6 sm:py-[42px]"><div className="dashboard-shell relative mx-auto max-w-[1280px] overflow-hidden rounded-[38px] border border-white/90"><div className="dashboard-backdrop absolute inset-0" /><div className="relative z-10 px-4 pt-5 pb-4 sm:px-10 sm:pt-5">
     <DashboardHeader active={active} onNavigate={navigate} search={search} onSearchChange={setSearch} onNotifications={() => open("Notifications")} />
