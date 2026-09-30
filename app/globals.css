@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/figma/jakarta-medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/figma/jakarta-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700 800;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { color-scheme: light; }
+body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; }
+.glass-nav { background: linear-gradient(134deg, rgba(255,255,255,.72), rgba(255,255,255,.45)); box-shadow: 0 8px 24px -6px rgba(15,23,42,.06), inset 0 1px 1.5px 1px rgba(255,255,255,.85); }
+.glass-card { box-shadow: 0 30px 80px -20px rgba(14,30,60,.16), 0 16px 36px -12px rgba(2,132,199,.10), inset 0 1.5px 2px 1px rgba(255,255,255,.95), inset 0 -1.5px 2px 1px rgba(255,255,255,.4); }
+.magma-button { background: linear-gradient(135deg, #ff7a1a, #ff5500); box-shadow: 0 14px 32px -4px rgba(255,107,0,.45), inset 0 1.5px 1.5px rgba(255,255,255,.55), inset 0 -1.5px 2px rgba(180,50,0,.25); }
+.magma-button::before { content: ""; position: absolute; inset: 0 0 52% 0; border-radius: 16px 16px 999px 999px; background: linear-gradient(to bottom,rgba(255,255,255,.35),transparent); pointer-events: none; }
+.warehouse-backdrop { background-image: linear-gradient(180deg,rgba(9,18,36,.6),rgba(9,18,36,.42) 35%,rgba(9,18,36,.62)), url('/figma/warehouse.png'); background-position: center; background-size: cover; filter: blur(20px); opacity: .55; transform: scale(1.08); }
