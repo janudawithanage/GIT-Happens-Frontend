@@ -1,12 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { OnboardingScreen } from "@/components/onboarding-screen";
 import { SplashScreen } from "@/components/splash-screen";
+import { onboardingSteps } from "@/lib/onboarding";
 import { SignInScreen } from "./SignInScreen";
 
 export function SignInExperience() {
   const [phase, setPhase] = useState<"loading" | "leaving" | "ready">("loading");
   const [progress, setProgress] = useState(8);
+  const [onboardingComplete, setOnboardingComplete] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (onboardingComplete) contentRef.current?.focus({ preventScroll: true });
+  }, [onboardingComplete]);
 
   useEffect(() => {
     let cancelled = false;
@@ -16,8 +24,8 @@ export function SignInExperience() {
     let fallbackTimer: ReturnType<typeof setTimeout>;
     let fadeTimer: ReturnType<typeof setTimeout>;
 
-    // Warm the sign-in imagery while the splash is visible, including its CSS backdrop.
-    const assets = ["/figma/warehouse.png", "/figma/logo.png", "/figma/splash/logo.png", "/figma/splash/glow-blue.svg", "/figma/splash/glow-orange.svg", "/figma/splash/role-dot.svg", "/figma/splash/status-dot.svg"];
+    // Warm all four onboarding backgrounds and the sign-in imagery during the splash.
+    const assets = [...onboardingSteps.map(step => step.image), "/figma/onboarding/chevron-right.svg", "/figma/warehouse.png", "/figma/logo.png", "/figma/splash/logo.png", "/figma/splash/glow-blue.svg", "/figma/splash/glow-orange.svg", "/figma/splash/role-dot.svg", "/figma/splash/status-dot.svg"];
     const markReady = () => {
       completed += 1;
       if (!cancelled && !finishing) setProgress(8 + Math.round(87 * completed / (assets.length + 1)));
@@ -51,7 +59,9 @@ export function SignInExperience() {
 
   const loading = phase !== "ready";
   return <div className="signin-experience" data-loading={loading} data-phase={phase}>
-    <div className="signin-content" inert={loading} aria-hidden={loading}><SignInScreen /></div>
+    <div ref={contentRef} tabIndex={-1} className="signin-content" inert={loading} aria-hidden={loading}>
+      {onboardingComplete ? <SignInScreen /> : <OnboardingScreen onComplete={() => setOnboardingComplete(true)} />}
+    </div>
     {loading && <SplashScreen progress={progress} leaving={phase === "leaving"} />}
   </div>;
 }

@@ -51,6 +51,53 @@ body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; }
 @media (min-width: 640px) { .splash-wordmark h1 { font-size: 36px; } .splash-loading { bottom: 48px; } }
 @media (prefers-reduced-motion: reduce) { .splash-screen,.splash-progress { transition: none; } }
 
+.signin-content { outline: none; }
+@font-face { font-family: "Onboarding Jakarta"; src: url("/figma/onboarding/jakarta-regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Onboarding Jakarta"; src: url("/figma/onboarding/jakarta-semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Onboarding Jakarta"; src: url("/figma/jakarta-bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+.onboarding-screen { position: relative; display: flex; flex-direction: column; min-height: 100dvh; overflow: hidden; background: #04070d; color: white; font-family: "Onboarding Jakarta",sans-serif; }
+.onboarding-images,.onboarding-scrim { position: absolute; inset: 0; pointer-events: none; }
+.onboarding-image { object-fit: cover; object-position: center; opacity: 0; transition: opacity 400ms ease; }
+.onboarding-image-active { opacity: 1; }
+.onboarding-scrim { background: linear-gradient(180deg,rgba(10,15,24,.25),rgba(10,15,24,.1) 30%,rgba(8,12,24,.45) 55%,rgba(5,9,18,.88) 78%,rgba(3,6,12,.98)); }
+.onboarding-content { position: relative; z-index: 1; align-self: center; width: 100%; max-width: 1280px; margin-top: auto; padding: max(32px,calc(100dvh - 294px)) 28px max(28px,calc(env(safe-area-inset-bottom) + 24px)); }
+.onboarding-copy { max-width: 334px; animation: onboarding-copy-enter 300ms ease both; }
+.onboarding-copy h1 { margin: 0; font-size: clamp(27px,8.72vw,34px); font-weight: 700; line-height: 38px; letter-spacing: -.85px; text-shadow: 0 2px 4px rgba(0,0,0,.12); }
+.onboarding-copy h1 span { display: block; }
+.onboarding-copy p { max-width: 310px; min-height: 64px; margin: 20px 0 0; font-size: 14px; font-weight: 400; line-height: 21.13px; color: rgba(255,255,255,.94); }
+.onboarding-controls { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; max-width: 420px; margin-top: 32px; }
+.onboarding-navigation { display: flex; flex-direction: column; align-items: flex-start; }
+.onboarding-dots { display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.onboarding-dots li { width: 6px; height: 6px; border-radius: 9999px; background: rgba(255,255,255,.4); transition: width 200ms ease,background-color 200ms ease; }
+.onboarding-dots .onboarding-dot-complete { background: rgba(255,255,255,.7); }
+.onboarding-dots li[aria-current="step"] { width: 20px; background: #ff7a1a; }
+.onboarding-skip { min-width: 44px; min-height: 44px; margin: 3px 0 -7px -8px; padding: 8px; color: #ff7a1a; font-size: 14px; line-height: 21px; letter-spacing: .35px; text-align: left; cursor: pointer; }
+.onboarding-next-action { display: flex; align-items: center; gap: 20px; }
+.onboarding-next { position: relative; display: flex; width: 58px; height: 58px; flex-shrink: 0; align-items: center; justify-content: center; border: 1px solid rgba(255,122,26,.85); border-radius: 50%; cursor: pointer; transition: transform 200ms ease; }
+.onboarding-next > span { display: flex; width: 52px; height: 52px; align-items: center; justify-content: center; border: 1px solid rgba(255,122,26,.95); border-radius: 50%; background: rgba(22,27,38,.85); box-shadow: 0 0 16px rgba(255,122,26,.45),inset 0 0 8px rgba(255,122,26,.25); backdrop-filter: blur(6px); }
+.onboarding-next:hover { transform: translateX(2px); }
+.onboarding-get-started { min-height: 44px; padding: 8px 0; font-size: 14px; font-weight: 600; cursor: pointer; }
+.onboarding-screen button:focus-visible { outline: 2px solid #ff7a1a; outline-offset: 5px; border-radius: 8px; }
+.onboarding-screen .onboarding-next:focus-visible { border-radius: 50%; }
+@keyframes onboarding-copy-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 640px) { .onboarding-content { padding: max(48px,calc(100dvh - 390px)) 48px 48px; } .onboarding-copy { max-width: 560px; } .onboarding-copy h1 { font-size: 52px; line-height: 58px; letter-spacing: -1.3px; } .onboarding-copy p { max-width: 440px; font-size: 16px; line-height: 25px; } .onboarding-controls { max-width: 540px; margin-top: 36px; } }
+@media (min-width: 1024px) {
+  .onboarding-content { padding: max(48px,calc(100dvh - 390px)) 48px 48px; }
+  .onboarding-copy { max-width: 760px; margin-inline: 0; text-align: left; }
+  .onboarding-copy h1 { font-size: clamp(48px,4vw,60px); line-height: 1.12; letter-spacing: -1.5px; }
+  .onboarding-copy p { max-width: 540px; min-height: 50px; margin: 20px 0 0; font-size: 18px; line-height: 27px; }
+  .onboarding-controls { position: relative; width: 100%; max-width: none; min-height: 72px; align-items: center; margin-top: 40px; }
+  .onboarding-navigation { flex-direction: row; align-items: center; }
+  .onboarding-dots { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .onboarding-dots li { width: 8px; height: 8px; }
+  .onboarding-dots li[aria-current="step"] { width: 28px; }
+  .onboarding-skip { margin: 0 0 0 -8px; font-size: 16px; }
+  .onboarding-next { width: 72px; height: 72px; }
+  .onboarding-next > span { width: 66px; height: 66px; }
+  .onboarding-get-started { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .onboarding-image,.onboarding-dots li,.onboarding-next { transition: none; } .onboarding-copy { animation: none; } }
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/figma/dashboard/jetbrains-medium.ttf") format("truetype");
