@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1132" height="488.382" viewBox="0 0 1132 488.382" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Glow &#194;&#183; Peliyagoda&#226;&#128;&#147;Colombo" filter="url(#filter0_f_0_966)">
+<path id="Vector" d="M287.797 226.749C270.354 261.633 254.656 292.157 244.191 322.681" stroke="#1E88FF" stroke-opacity="0.22" stroke-width="13.9538" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_f_0_966" x="-5.23267" y="-5.23267" width="1142.47" height="498.847" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.61633" result="effect1_foregroundBlur_0_966"/>
+</filter>
+</defs>
+</svg>

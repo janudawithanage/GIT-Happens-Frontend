@@ -50,3 +50,11 @@ body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; }
 .orders-orange-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #ff7a1a; color: #fff; box-shadow: 0 10px 15px -3px rgba(249,115,22,.25),0 4px 6px -4px rgba(249,115,22,.25); cursor: pointer; }
 .orders-orange-button:hover { background: #f46b0b; }
 @media (max-width: 767px) { .dashboard-stage { min-height: 100vh; padding: 12px; } .dashboard-shell { border-radius: 26px; } }
+.dispatcher-backdrop { background-image: radial-gradient(ellipse 68% 100% at 50% 100%,rgba(89,140,255,.16),rgba(89,140,255,0)),linear-gradient(180deg,rgba(9,18,36,.6),rgba(9,18,36,.42) 35%,rgba(9,18,36,.62)),url('/figma/dashboard/93c55.png'); background-size: cover; background-position: center; }
+.dispatcher-glass { background: rgba(255,255,255,.86); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 12px 32px -8px rgba(13,26,51,.08),inset 0 1px 0 rgba(255,255,255,.5); backdrop-filter: blur(12px); }
+.dispatcher-glass-strong { background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 16px 40px -8px rgba(5,13,31,.22); backdrop-filter: blur(12px); }
+.dispatcher-nav { background: linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.74)); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 8px 24px -6px rgba(15,23,42,.08),inset 0 1px 1px white; backdrop-filter: blur(20px); }
+.dispatcher-accent { background: #0284c7; box-shadow: 0 8px 20px -6px rgba(3,133,199,.3); }
+.dispatcher-accent:hover { background: #0369a1; }
+.dispatcher-subtle { background: rgba(255,255,255,.66); border: 1px solid rgba(255,255,255,.95); }
+.dispatcher-hatch { background-image: repeating-linear-gradient(135deg,rgba(148,163,184,.18) 0 4px,rgba(255,255,255,.5) 4px 8px); }
