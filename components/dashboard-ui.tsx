@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { ProfileMenu } from "./profile-menu";
 
 const icons = {
   delayed: ["0cc34.svg", 16.6667, 16.6667], vehicle: ["88b0f.svg", 11.25, 12.5], box: ["32350.svg", 12.5, 12.5], bay: ["b4cd8.svg", 8.125, 13.75],
@@ -55,7 +56,7 @@ export function DashboardHeader({ active, onNavigate, search, onSearchChange, on
     <div className="dashboard-nav flex h-12 w-full items-center gap-1 rounded-full border border-white/95 p-[7px] sm:w-[379px]">
       <label className="flex h-[34px] min-w-0 flex-1 items-center gap-2 rounded-full border border-white/80 bg-white/60 px-3"><DashboardIcon name="search" /><input aria-label="Search orders and vehicles" value={search} onChange={e => onSearchChange(e.target.value)} placeholder="Search orders, vehicles..." className="min-w-0 w-full bg-transparent text-[12px] text-[#334155] outline-none placeholder:text-[#94a3b8]" /></label>
       <button type="button" aria-label="Notifications" onClick={onNotifications} className="relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white/70"><DashboardIcon name="bell" /><span className="absolute right-0 top-0 flex h-[14px] w-[14px] items-center justify-center rounded-full bg-[#ff7a1a] text-[8px] font-extrabold text-[#0f172a] ring-2 ring-white">3</span></button>
-      <button type="button" aria-label="Profile: Marcus Vance" onClick={() => onNavigate("Profile")} className="ml-1 h-8 w-8 shrink-0 cursor-pointer overflow-hidden rounded-full border-2 border-white ring-2 ring-[#ff7a1a]"><Image src="/figma/dashboard/37c7d.png" width={28} height={28} alt="Marcus Vance" className="h-full w-full object-cover" /></button>
+      <ProfileMenu />
     </div>
   </header>;
 }
