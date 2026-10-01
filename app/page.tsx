@@ -1,5 +1,5 @@
-import { SignInScreen } from "./sign-in/SignInScreen";
+import { SignInExperience } from "./sign-in/SignInExperience";
 
 export default function Home() {
-  return <SignInScreen />;
+  return <SignInExperience />;
 }

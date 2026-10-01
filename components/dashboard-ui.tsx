@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { ProfileMenu } from "./profile-menu";
 
 const icons = {
   delayed: ["0cc34.svg", 16.6667, 16.6667], vehicle: ["88b0f.svg", 11.25, 12.5], box: ["32350.svg", 12.5, 12.5], bay: ["b4cd8.svg", 8.125, 13.75],
@@ -23,6 +24,20 @@ export function DashboardButton({ children, tone = "light", className = "", ...p
   return <button {...props} className={`inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border px-4 py-[8px] text-[11px] font-bold shadow-sm transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-60 ${style} ${className}`}>{children}</button>;
 }
 
+export function DashboardPageHeading({ title, subtitle, actions }: { title: string; subtitle?: string; actions: ReactNode }) {
+  return <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
+    <div className="min-w-0">
+      <div className="flex flex-wrap gap-2">
+        <span className="rounded-full border border-white/75 bg-white/80 px-3 py-1 text-[10px] font-semibold"><span className="mr-1 text-emerald-500">●</span>Operational Grid Nominal</span>
+        <span className="rounded-full border border-white/70 bg-white/45 px-3 py-1 text-[10px] text-[#475569]">Waypoint Style — Colombo 07 • OUT104</span>
+      </div>
+      <h1 className="mt-1 text-[26px] font-extrabold leading-tight tracking-[-1px] text-white sm:text-[29px]">{title}</h1>
+      {subtitle && <p className="mt-1 text-[12px] text-white/75">{subtitle}</p>}
+    </div>
+    <div className="flex flex-wrap gap-2 sm:mt-3">{actions}</div>
+  </div>;
+}
+
 export function DashboardStatCard({ title, value, detail, foot, icon, alert = false }: { title: string; value: string; detail: ReactNode; foot: ReactNode; icon: DashboardIconName; alert?: boolean }) {
   return <article className={`dashboard-kpi flex h-[112px] min-w-0 flex-col justify-between rounded-[24px] p-4 ${alert ? "text-[#ff6b00]" : "text-[#0f172a]"}`}><div className="flex items-start justify-between gap-2"><h2 className={`pt-2 text-[11px] font-bold tracking-[.3px] ${alert ? "text-[#ff6b00]" : "text-[#64748b]"}`}>{title}</h2><span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border ${alert ? "border-orange-300/50 bg-orange-300/10" : "border-white bg-white/80"}`}><DashboardIcon name={icon} /></span></div><div className="flex min-w-0 items-end justify-between gap-1"><div className="flex min-w-0 items-baseline gap-[6px]"><strong className="text-[24px] font-bold leading-none">{value}</strong><span className={alert ? "whitespace-nowrap text-[10px]" : "truncate text-[11px]"}>{detail}</span></div><span className={alert ? "shrink-0 text-right text-[9px]" : "shrink-0 text-right text-[10px]"}>{foot}</span></div><div className={`h-[6px] w-full rounded-full ${alert ? "bg-[#ff7a1a]" : "bg-white/85"}`} /></article>;
 }
@@ -41,7 +56,7 @@ export function DashboardHeader({ active, onNavigate, search, onSearchChange, on
     <div className="dashboard-nav flex h-12 w-full items-center gap-1 rounded-full border border-white/95 p-[7px] sm:w-[379px]">
       <label className="flex h-[34px] min-w-0 flex-1 items-center gap-2 rounded-full border border-white/80 bg-white/60 px-3"><DashboardIcon name="search" /><input aria-label="Search orders and vehicles" value={search} onChange={e => onSearchChange(e.target.value)} placeholder="Search orders, vehicles..." className="min-w-0 w-full bg-transparent text-[12px] text-[#334155] outline-none placeholder:text-[#94a3b8]" /></label>
       <button type="button" aria-label="Notifications" onClick={onNotifications} className="relative flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white/70"><DashboardIcon name="bell" /><span className="absolute right-0 top-0 flex h-[14px] w-[14px] items-center justify-center rounded-full bg-[#ff7a1a] text-[8px] font-extrabold text-[#0f172a] ring-2 ring-white">3</span></button>
-      <button type="button" aria-label="Profile: Marcus Vance" onClick={() => onNavigate("Profile")} className="ml-1 h-8 w-8 shrink-0 cursor-pointer overflow-hidden rounded-full border-2 border-white ring-2 ring-[#ff7a1a]"><Image src="/figma/dashboard/37c7d.png" width={28} height={28} alt="Marcus Vance" className="h-full w-full object-cover" /></button>
+      <ProfileMenu />
     </div>
   </header>;
 }
