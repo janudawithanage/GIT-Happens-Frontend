@@ -1,5 +1,5 @@
-import { SignInExperience } from "./SignInExperience";
+import { SignInScreen } from "./SignInScreen";
 
 export default function SignInPage() {
-  return <SignInExperience />;
+  return <SignInScreen />;
 }
