@@ -24,6 +24,33 @@ body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; }
 .magma-button::before { content: ""; position: absolute; inset: 0 0 52% 0; border-radius: 16px 16px 999px 999px; background: linear-gradient(to bottom,rgba(255,255,255,.35),transparent); pointer-events: none; }
 .warehouse-backdrop { background-image: linear-gradient(180deg,rgba(9,18,36,.6),rgba(9,18,36,.42) 35%,rgba(9,18,36,.62)), url('/figma/warehouse.png'); background-position: center; background-size: cover; filter: blur(20px); opacity: .55; transform: scale(1.08); }
 
+@font-face { font-family: "Inter Splash"; src: url("/figma/splash/inter-semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Inter Splash"; src: url("/figma/splash/inter-bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Inter Splash"; src: url("/figma/splash/inter-extrabold.ttf") format("truetype"); font-weight: 800; font-display: swap; }
+.signin-experience[data-loading="true"] { height: 100dvh; overflow: hidden; background: #0d172b; }
+.signin-experience[data-phase="loading"] .signin-content { visibility: hidden; }
+.splash-screen { position: fixed; inset: 0; z-index: 100; overflow: hidden; background: linear-gradient(180deg,#0d172b,#0a1224 55%,#050a17); color: white; font-family: "Inter Splash",sans-serif; opacity: 1; transition: opacity 350ms ease; }
+.splash-screen-leaving { opacity: 0; }
+.splash-glows { position: absolute; inset: 0; pointer-events: none; }
+.splash-glows img { max-width: none; }
+.splash-glow-blue { position: absolute; left: calc(50% - 210px); top: calc(50% - 260px); }
+.splash-glow-orange { position: absolute; left: calc(50% - 175px); top: calc(50% - 30px); }
+.splash-brand { position: absolute; top: calc(50% - 24px); left: 50%; display: flex; flex-direction: column; align-items: center; gap: 18px; width: max-content; max-width: calc(100% - 32px); transform: translate(-50%,-50%); text-align: center; }
+.splash-logo { display: flex; align-items: center; justify-content: center; width: 112px; height: 112px; flex-shrink: 0; border: 1.5px solid rgba(255,255,255,.95); border-radius: 30px; background: rgba(255,255,255,.84); box-shadow: 0 10px 24px -6px rgba(5,13,31,.35),inset 0 0 18px rgba(255,255,255,.7),inset 0 -1px 2px rgba(255,255,255,.6),inset 0 1.5px .5px white; }
+.splash-logo img { border-radius: 12px; }
+.splash-role { display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,.25); border-radius: 9999px; background: rgba(255,255,255,.14); padding: 5px 12px; color: rgba(255,255,255,.95); font-size: 11px; font-weight: 600; line-height: normal; letter-spacing: 1.1px; }
+.splash-wordmark h1 { margin: 0; font-size: clamp(23px,7.7vw,30px); font-weight: 800; line-height: normal; letter-spacing: .16em; white-space: nowrap; }
+.splash-wordmark h1 span { color: #ff7a1a; }
+.splash-wordmark p { margin: 8px 0 0; color: rgba(255,255,255,.72); font-size: clamp(9px,2.82vw,11px); font-weight: 600; line-height: normal; letter-spacing: .14em; white-space: nowrap; }
+.splash-loading { position: absolute; bottom: max(35px,calc(env(safe-area-inset-bottom) + 24px)); left: 50%; width: 300px; max-width: calc(100% - 64px); transform: translateX(-50%); }
+.splash-track { height: 6px; overflow: hidden; border-radius: 3px; background: rgba(255,255,255,.16); }
+.splash-progress { height: 6px; border-radius: 3px; background: linear-gradient(90deg,#4099ff,#ff7a1a); transition: width 300ms ease; }
+.splash-loading-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; line-height: normal; }
+.splash-loading-caption span { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,.8); font-size: 10px; font-weight: 600; letter-spacing: .8px; }
+.splash-loading-caption strong { color: rgba(255,255,255,.9); font-size: 11px; font-weight: 700; }
+@media (min-width: 640px) { .splash-wordmark h1 { font-size: 36px; } .splash-loading { bottom: 48px; } }
+@media (prefers-reduced-motion: reduce) { .splash-screen,.splash-progress { transition: none; } }
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/figma/dashboard/jetbrains-medium.ttf") format("truetype");
