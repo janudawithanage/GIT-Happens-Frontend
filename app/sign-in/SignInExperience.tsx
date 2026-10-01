@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { OnboardingScreen } from "@/components/onboarding-screen";
 import { SplashScreen } from "@/components/splash-screen";
 import { onboardingSteps } from "@/lib/onboarding";
+import { clearSignOutNavigation, isSignOutNavigation } from "@/lib/sign-in-navigation";
 import { SignInScreen } from "./SignInScreen";
 
 export function SignInExperience() {
-  const [phase, setPhase] = useState<"loading" | "leaving" | "ready">("loading");
+  const [skipIntro] = useState(isSignOutNavigation);
+  const [phase, setPhase] = useState<"loading" | "leaving" | "ready">(skipIntro ? "ready" : "loading");
   const [progress, setProgress] = useState(8);
-  const [onboardingComplete, setOnboardingComplete] = useState(false);
+  const [onboardingComplete, setOnboardingComplete] = useState(skipIntro);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,6 +19,11 @@ export function SignInExperience() {
   }, [onboardingComplete]);
 
   useEffect(() => {
+    if (skipIntro) {
+      clearSignOutNavigation();
+      return;
+    }
+
     let cancelled = false;
     let finishing = false;
     let completed = 0;
@@ -55,7 +62,7 @@ export function SignInExperience() {
       clearTimeout(fallbackTimer);
       clearTimeout(fadeTimer);
     };
-  }, []);
+  }, [skipIntro]);
 
   const loading = phase !== "ready";
   return <div className="signin-experience" data-loading={loading} data-phase={phase}>
