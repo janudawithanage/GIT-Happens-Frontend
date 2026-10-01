@@ -1,0 +1,798 @@
+{
+  "source": "Figma X3PKFFRkYReiZSNAn504oE / 719:5042",
+  "assets": [
+    {
+      "file": "08853.svg",
+      "bytes": 804,
+      "sha256": "a1c9c13184caebe73803e166173a6697abe416d13bb8d9c35761d5619a90866d",
+      "nativeSvgSize": [
+        16.6667,
+        10.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "10a5a.svg",
+      "bytes": 666,
+      "sha256": "15bdb58532879a3694d75ac117c6e22548a3163b0ca5e36b904cedc4cd64aff3",
+      "nativeSvgSize": [
+        10.0,
+        11.25
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "151ae.svg",
+      "bytes": 1495,
+      "sha256": "3340dc0d322fc55114a19ba0eb30c27259ddaece908bc096509d9e4313d30ef1",
+      "nativeSvgSize": [
+        20.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "169b0.svg",
+      "bytes": 1229,
+      "sha256": "98f70e3c2eb48d8b883b6928a4bc057627f50f4292490df55d028dd165fd9fd3",
+      "nativeSvgSize": [
+        20.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "1bd12.svg",
+      "bytes": 1211,
+      "sha256": "bad3217fde70dc913fffda86da1537dbd81731cf6a3f808a2adc9583e5f161ee",
+      "nativeSvgSize": [
+        15.0,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "1de50.svg",
+      "bytes": 1990,
+      "sha256": "a7282ff08f440fb9b85363f6f767dac8bf8ade280ed1afac3561393d8780bef0",
+      "nativeSvgSize": [
+        20.0,
+        14.15
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "22237.svg",
+      "bytes": 645,
+      "sha256": "c9335d3453b7eb1be978f1bcc84384ac8b69a8a4d56cb47b4ecb7ba8926b9819",
+      "nativeSvgSize": [
+        22.0,
+        19.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "245b3.svg",
+      "bytes": 1356,
+      "sha256": "3e8076352258de0b483e7cd8a6dded381ae1c24f5a14aeba5186996834c5f7ed",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "253d0.svg",
+      "bytes": 1237,
+      "sha256": "12962542f3bf4c27c164a60de6ad611598ecb10a39f8e33d9e820a68ae15a66d",
+      "nativeSvgSize": [
+        20.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "2703a.svg",
+      "bytes": 415,
+      "sha256": "12b7c4b8ca4f7664271549696c313427b9f47e391edb77a0012d50ce14ba2286",
+      "nativeSvgSize": [
+        13.5,
+        13.5
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "28079.svg",
+      "bytes": 1477,
+      "sha256": "dd35b710e6487988242f6fa327d9014a57232c3b6dd6573b62db58288523906c",
+      "nativeSvgSize": [
+        13.3333,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "29bfc.svg",
+      "bytes": 2418,
+      "sha256": "28ac5c9a77c797ea6451684e24c3afed97d1274e1c4699d94a342c76d692e87e",
+      "nativeSvgSize": [
+        18.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "2ada5.svg",
+      "bytes": 1986,
+      "sha256": "9def82253ec856e5857e2913d704b892a25ccf05a1f84b718d32c80f088b4a44",
+      "nativeSvgSize": [
+        18.3333,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "2d8f2.svg",
+      "bytes": 1180,
+      "sha256": "1674bdeace8a98beb176181d92c8425b69336c4b027e7cd589c08c3d226ef1c1",
+      "nativeSvgSize": [
+        16.0,
+        21.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "2fd94.svg",
+      "bytes": 1702,
+      "sha256": "b74ce9d9aed6d5d4274a3d2d14f8a8024bd6fbde1f83f8966acaa9d8612be5a1",
+      "nativeSvgSize": [
+        15.0013,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "322ca.png",
+      "bytes": 64805,
+      "sha256": "e695fefc432101b9487d95f3af903027de4a6b8ba48095a36cff5659b3a8600f",
+      "nativeSvgSize": null,
+      "callsites": [
+        "components/store-manager-workflow.tsx",
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "3960e.svg",
+      "bytes": 1066,
+      "sha256": "206b0b380587eff165bb184ff7a51b7c393de993c5917eaa2010e539ffb867f9",
+      "nativeSvgSize": [
+        12.6667,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "3af94.svg",
+      "bytes": 473,
+      "sha256": "5db6374efe5f2078f0f04826471ed5d6b1b157325be5573c9e7f43c7077ac469",
+      "nativeSvgSize": [
+        21.9,
+        12.025
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "3b1d3.svg",
+      "bytes": 1375,
+      "sha256": "652886c0acbbaeb42d9757a586c7c1b3f7eff2427089941662b2eebda8ec2712",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "40481.svg",
+      "bytes": 1522,
+      "sha256": "a0bff326c88c0b7acbe1ee40d3b8f43214431084994cb85716e0ee837bc89925",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "41ce7.svg",
+      "bytes": 1481,
+      "sha256": "5b261416c3a9591230557650689f2d128e818159de4e5a83b1013df6c86e15a0",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "4326c.svg",
+      "bytes": 1121,
+      "sha256": "af887897df16732fe8196dd2dc22a497a2d51955877d1883fd3ce1ce5dff02c5",
+      "nativeSvgSize": [
+        13.5,
+        13.5
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "44414.svg",
+      "bytes": 806,
+      "sha256": "b876ba3ccc0a3ae27e2c9ebc584deaccdc7a3bf6e831b9f35e1c28f4bdc982f8",
+      "nativeSvgSize": [
+        22.0,
+        21.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "4949d.svg",
+      "bytes": 708,
+      "sha256": "772e9a09107c75d0ac6e2ce607dc3e47917fdc9c2a26915c97c06d9f61a44cbc",
+      "nativeSvgSize": [
+        16.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "49fed.svg",
+      "bytes": 1651,
+      "sha256": "0a969929057313c695432d251ab829d755f378c6f738a8e2b4d884398529c571",
+      "nativeSvgSize": [
+        16.5,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "4afc3.svg",
+      "bytes": 2206,
+      "sha256": "fd3b9809b4612800af24dcb957529378c0de13ae83c01e2d9b9a18bba4a76a60",
+      "nativeSvgSize": [
+        16.6667,
+        16.6667
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "4eae9.svg",
+      "bytes": 1049,
+      "sha256": "284fa5845e8a31ad43cd3dac9941ac0e3af5721bee627d72a1d9120a31861f87",
+      "nativeSvgSize": [
+        18.3333,
+        17.5
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "52b0c.svg",
+      "bytes": 704,
+      "sha256": "27c7f1b07777b7b7ed74fa3716698b858f3569f4ce0ae086b9356da184e971cd",
+      "nativeSvgSize": [
+        22.0,
+        18.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "5f5aa.svg",
+      "bytes": 1054,
+      "sha256": "f663367e155141450ac82be7a5e3a70ebf75d96f718e20a7ca7e74a0bf9866b3",
+      "nativeSvgSize": [
+        20.0,
+        18.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "60007.svg",
+      "bytes": 832,
+      "sha256": "ee51876cbf25ffcbd7d89bf86317aa92ee34e7429aed84c92f011a5ce608e49b",
+      "nativeSvgSize": [
+        11.25,
+        11.25
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "6057a.svg",
+      "bytes": 693,
+      "sha256": "9b53e61887daad4c3fcde9c5632f21b88ac5a2d67e40e8acbdbff0f3b056303d",
+      "nativeSvgSize": [
+        13.3333,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "61b7c.svg",
+      "bytes": 976,
+      "sha256": "ee8960ae0a13b61feed7d795e0ce6e7ee8e1aadced759fd82d71b857a13b3114",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "61ce3.svg",
+      "bytes": 1651,
+      "sha256": "11abcd4d7e9a268e6bbac2719714c359e144e07849624fcbc02933b2b8b5fa80",
+      "nativeSvgSize": [
+        16.5,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "646e0.svg",
+      "bytes": 1522,
+      "sha256": "b2d5df85f46f7f92ba51f998435fdd08a5f1b28f30879589359811ebd1fb1f05",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "660a4.svg",
+      "bytes": 1257,
+      "sha256": "409e975f3c1fa36d9b7ab4157cf94dd288b2a916d987e76305d6dd62f14030a7",
+      "nativeSvgSize": [
+        18.0,
+        21.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "6ce1e.svg",
+      "bytes": 1144,
+      "sha256": "a2e0332391ea0179170603698f602370f23d62da979e15163ba06e1acf8b7015",
+      "nativeSvgSize": [
+        16.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "77ca4.svg",
+      "bytes": 1199,
+      "sha256": "f52bfe800c1e1c9dfbb1fbf5e84e0ad4228bb3044f737a4febd470fbaa1774ea",
+      "nativeSvgSize": [
+        13.5,
+        13.5
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "81e2e.svg",
+      "bytes": 1078,
+      "sha256": "e485ba3f431ef201f47753f3ffde06397fce3b1bebb8c10a146a7fd2dc6d4be8",
+      "nativeSvgSize": [
+        13.0,
+        22.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "8336c.svg",
+      "bytes": 1211,
+      "sha256": "03826a9d35ecb4016ff567f96430a507897e0c54512db8fc6be56e3ae7459b19",
+      "nativeSvgSize": [
+        15.0,
+        12.0
+      ],
+      "callsites": [
+        "lib/store-manager-demo.ts"
+      ]
+    },
+    {
+      "file": "8ba37.svg",
+      "bytes": 391,
+      "sha256": "e3895cb246f133d1dcd95251a60c959c4be5076d2c16dd707feb5ed871ae5ae2",
+      "nativeSvgSize": [
+        20.0,
+        18.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "8c074.svg",
+      "bytes": 1299,
+      "sha256": "bd0e5b3f6aeae34bbad62ac45cc96df2845e0124d2b218798980514fe19c0802",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "903fd.svg",
+      "bytes": 3361,
+      "sha256": "a09d0ac09ce61bdae80d7a545f2dd7e9ab1e768693c15b5c95db9efe5db703e4",
+      "nativeSvgSize": [
+        15.0,
+        16.5
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "91e08.svg",
+      "bytes": 1254,
+      "sha256": "3f9b627d5df1f6d878cab0c8818c0a888e78fdf043b84807fbf804e4a0c2925f",
+      "nativeSvgSize": [
+        12.0,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "92d5d.png",
+      "bytes": 69577,
+      "sha256": "3148caef8f910a444cf88b267abdbf811335f3d142d04930fe60ff244635a676",
+      "nativeSvgSize": null,
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "a67b5.svg",
+      "bytes": 314,
+      "sha256": "cfae1fcbed08773cc6949ef8237c2a2c120f79191c2000d47529fff0bc287d0c",
+      "nativeSvgSize": [
+        20.0,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "a99a9.png",
+      "bytes": 25771,
+      "sha256": "eabe4d171f6fb8fa054e34c05fa1155aea6e9a0b14b2802506f5d089a9724c97",
+      "nativeSvgSize": null,
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "ae38a.svg",
+      "bytes": 976,
+      "sha256": "6ba70a36fca90e48ebcdfcfc15ec546c4d48b499eead13ecada81bac3301a046",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "af092.svg",
+      "bytes": 1457,
+      "sha256": "df23900a98609a409656bcaf426534aa9bc4baf89ffc4472632cde653cbd8849",
+      "nativeSvgSize": [
+        13.3333,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "b681c.svg",
+      "bytes": 1157,
+      "sha256": "ae087cf9d9ac5124051aa6fee2afa0c7f248554b137e3f6161d6df3b9f046488",
+      "nativeSvgSize": [
+        12.75,
+        12.75
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "b7e1b.svg",
+      "bytes": 3183,
+      "sha256": "c7b5c4b9b01cb8fe5637ca645e3ed216f3db7b3aede966467a24ac82b9bc9b20",
+      "nativeSvgSize": [
+        80.0,
+        80.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "bc582.svg",
+      "bytes": 1373,
+      "sha256": "9c6229b8ed136e49999f0ab8b95890a7ac9bcb7b47a42fe1d613ce8f294d153f",
+      "nativeSvgSize": [
+        15.0,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "c1672.svg",
+      "bytes": 721,
+      "sha256": "a50da97cebcb999acf42ebb398eb60c9c8d79f68565c5504a341c350713d5f4c",
+      "nativeSvgSize": [
+        15.8333,
+        11.6667
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "c7bdf.svg",
+      "bytes": 1968,
+      "sha256": "ee705b9dbbd3af44d7eddc3f07e373dcbd2b0f6e7e467e50bef274c30355b200",
+      "nativeSvgSize": [
+        14.6667,
+        10.6667
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "c7e33.svg",
+      "bytes": 969,
+      "sha256": "efd6ffce92fa906ac2d55be28a59dd23321cc389fbcc6c93ef2ca32f62a7f3e7",
+      "nativeSvgSize": [
+        20.0,
+        13.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "ca724.svg",
+      "bytes": 626,
+      "sha256": "227888595e0234ae2a3d3e94599b2ba6f2676983ea5b0e33e1d7b17fbd86f05d",
+      "nativeSvgSize": [
+        16.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "cbb8f.svg",
+      "bytes": 1146,
+      "sha256": "3f271cdf292298983835b03898f55d0c48d1cb45399376489ff42842b527d7a9",
+      "nativeSvgSize": [
+        13.3333,
+        13.3333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "cc4f2.svg",
+      "bytes": 2206,
+      "sha256": "9a211520b2e39e07b1316a318208516e326e585d77dfb50880c69842b230d1e8",
+      "nativeSvgSize": [
+        16.6667,
+        16.6667
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "cc80a.svg",
+      "bytes": 1556,
+      "sha256": "6a0f68ec0d399aea67fcf0a238721457cb7a01c315349468d704f0cedd72fa98",
+      "nativeSvgSize": [
+        28.9333,
+        28.9333
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "d567c.svg",
+      "bytes": 1211,
+      "sha256": "2404d72bb9b2908ec9ce854505e83889a74d3b95cd48da49bd56b809a8149db6",
+      "nativeSvgSize": [
+        15.0,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "d5c66.svg",
+      "bytes": 1522,
+      "sha256": "c147dc798d15466ad8ebb13f892841adceddb4e08c6cd1d18123813297aef3f1",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "e08ad.svg",
+      "bytes": 1649,
+      "sha256": "16a2f558b4c63450071f9fcf7cf53add45862ac24e51a0a6ba5f312f77d41260",
+      "nativeSvgSize": [
+        16.5,
+        12.0
+      ],
+      "callsites": [
+        "components/store-manager-order-flow.tsx"
+      ]
+    },
+    {
+      "file": "e4802.svg",
+      "bytes": 1522,
+      "sha256": "f9fac409283250676f5e2b1558e46e467a2ff1fe7f0783802ddd7f018bed874c",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "lib/store-manager-demo.ts"
+      ]
+    },
+    {
+      "file": "e6b73.svg",
+      "bytes": 1480,
+      "sha256": "a7b15b00c7ad623de6aa8f3d014a1de644699732d38d7f0f55d5c894e2f63437",
+      "nativeSvgSize": [
+        20.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "eda02.png",
+      "bytes": 24698,
+      "sha256": "333af798877a0a20beed7cad32f769dd0beb4ad4ddb3ccaa4f16cfb55eff35b8",
+      "nativeSvgSize": null,
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    },
+    {
+      "file": "f0733.svg",
+      "bytes": 1106,
+      "sha256": "d49027887bc1b1bc7fed37f1061f2be51fbb49fff3cfd6412480ec45e7b2909c",
+      "nativeSvgSize": [
+        13.5,
+        15.0
+      ],
+      "callsites": [
+        "lib/store-manager-demo.ts"
+      ]
+    },
+    {
+      "file": "f5fc7.svg",
+      "bytes": 2454,
+      "sha256": "5220cce2341fbff465d0dbccb03f3fcc96f9508364c83418c0678658a1eb754f",
+      "nativeSvgSize": [
+        18.0,
+        20.0
+      ],
+      "callsites": [
+        "components/store-manager-issue-flow.tsx"
+      ]
+    },
+    {
+      "file": "ffde8.svg",
+      "bytes": 817,
+      "sha256": "52add6e7d1cea957e4d529b82b75ddba6c624f5ef5d50811788f1eab30b44ba3",
+      "nativeSvgSize": [
+        9.75,
+        15.0
+      ],
+      "callsites": [
+        "components/store-manager-delivery-flow.tsx"
+      ]
+    }
+  ]
+}
