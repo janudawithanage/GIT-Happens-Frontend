@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon/cloudoff" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M1.75 1.75L19.25 19.25" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M5.05925 5.05925C3.83974 5.6898 2.86742 6.71179 2.29836 7.96118C1.7293 9.21057 1.59648 10.6149 1.92123 11.9488C2.24599 13.2828 3.00947 14.4689 4.08916 15.3169C5.16884 16.1649 6.50211 16.6256 7.875 16.625H15.3125C15.6999 16.6253 16.0853 16.5684 16.4561 16.4561" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M18.8405 14.4375C19.1384 13.8371 19.2781 13.1707 19.2464 12.5012C19.2146 11.8317 19.0126 11.1815 18.6593 10.6119C18.306 10.0424 17.8132 9.57247 17.2275 9.24664C16.6419 8.92081 15.9827 8.74987 15.3125 8.75H13.7463C13.4115 7.62936 12.7633 6.62782 11.8781 5.8635C10.9928 5.09917 9.90747 4.60395 8.75 4.43625" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="21" height="21" fill="white"/>
+</clipPath>
+</defs>
+</svg>

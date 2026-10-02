@@ -31,12 +31,8 @@ export function SignInScreen() {
       setMessage(`Those demo credentials do not match. Use the ${role} account shown above.`);
       return;
     }
-    if (role === "Driver") {
-      setMessage(`${role} demo credentials verified. The ${role} workspace is coming soon.`);
-      return;
-    }
     setMessage("");
-    router.push(role === "Loader" ? "/loader" : role === "Dispatcher" ? "/dispatcher" : "/store-manager/dashboard");
+    router.push(role === "Driver" ? "/driver" : role === "Loader" ? "/loader" : role === "Dispatcher" ? "/dispatcher" : "/store-manager/dashboard");
   }
 
   function fillDemoAccount() {

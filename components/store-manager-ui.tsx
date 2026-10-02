@@ -15,10 +15,10 @@ export function FlowAsset({ file, className = "" }: { file: string; className?: 
 export function StoreShell({ active, search, onSearch, children, overlay }: { active: string; search: string; onSearch: (value: string) => void; children: ReactNode; overlay?: ReactNode }) {
   const router = useRouter();
   const [dialog, setDialog] = useState("");
-  return <main className="dashboard-stage min-h-screen px-3 py-5 text-[#0f172a] sm:px-6 sm:py-[42px]">
-    <div className="dashboard-shell relative mx-auto max-w-[1280px] overflow-hidden rounded-[38px] border border-white/90">
+  return <main className="dashboard-stage workspace-stage min-h-screen px-3 py-5 text-[#0f172a] sm:px-6 sm:py-[42px]">
+    <div className="dashboard-shell workspace-shell relative mx-auto max-w-[1280px] overflow-hidden rounded-[38px] border border-white/90">
       <div className="orders-backdrop absolute inset-0" />
-      <div inert={Boolean(overlay)} className="relative z-10 px-4 pb-8 pt-5 sm:px-10">
+      <div inert={Boolean(overlay)} className="workspace-body relative z-10 px-4 pb-8 pt-5 sm:px-10">
         <DashboardHeader active={active} search={search} onSearchChange={onSearch} onNotifications={() => setDialog("Notifications")} onNavigate={section => { const href = storeManagerRoutes[section as keyof typeof storeManagerRoutes]; if (href) router.push(href); else setDialog("Marcus Vance · Store Manager"); }} />
         {children}
       </div>

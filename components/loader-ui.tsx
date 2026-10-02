@@ -8,6 +8,7 @@ import dimensions from '@/public/figma/loader/dimensions.json';
 import { DashboardButton, DashboardFooter, DashboardIcon, GlassPanel } from './dashboard-ui';
 import { markSignOutNavigation } from '@/lib/sign-in-navigation';
 import { useLoader } from './loader-provider';
+import { WorkspaceHeader } from './workspace-header';
 
 export function LoaderAsset({ file }: { file: string }) {
   const [width, height] = (dimensions as Record<string, number[]>)[file];
@@ -58,11 +59,22 @@ export function LoaderHeader({ active, overview, shortfall, changes, detail, sea
   search: string; onSearchChange: (value: string) => void; onSearchSubmit: (event: React.FormEvent<HTMLFormElement>) => void; onDialog: (title: string) => void;
 }) {
   const router = useRouter();
-  return <header className="loader-header"><div className="loader-header-capsule">
-      <div className="flex min-w-0 items-center gap-2.5">{overview ? <span className="loader-logo"><LoaderAsset file="3ea19.svg" /></span> : <button type="button" aria-label={shortfall ? 'Close shortfall report' : 'Back to loads'} onClick={() => router.push(shortfall ? '/loader/load-plan' : '/loader')} className="loader-header-action"><LoaderAsset file={shortfall ? 'a4828.svg' : '848da.svg'} /></button>}<div className="loader-header-wordmark"><strong>{overview ? 'Waypoint Flow' : shortfall ? 'Report shortfall' : changes ? 'VEH008 · Bay 5' : 'VEH012 · Bay 3'}</strong><span>{overview ? 'DOCK LOADER' : detail}</span></div></div>
-      <nav aria-label="Desktop loader navigation" className="loader-desktop-nav">{[...nav, {label:'Status',href:'/loader/trip-status'}].map(item => <Link key={item.label} href={item.href} aria-current={active === item.label ? 'page' : undefined}>{item.label}</Link>)}</nav>
+  const back = () => router.push(shortfall ? '/loader/load-plan' : '/loader');
+  const title = shortfall ? 'Report shortfall' : changes ? 'VEH008 · Bay 5' : 'VEH012 · Bay 3';
+  return <>
+    <header className="loader-header workspace-mobile-header"><div className="loader-header-capsule">
+      <div className="flex min-w-0 items-center gap-2.5">{overview ? <span className="loader-logo"><LoaderAsset file="3ea19.svg" /></span> : <button type="button" aria-label={shortfall ? 'Close shortfall report' : 'Back to loads'} onClick={back} className="loader-header-action"><LoaderAsset file={shortfall ? 'a4828.svg' : '848da.svg'} /></button>}<div className="loader-header-wordmark"><strong>{overview ? 'Waypoint Flow' : title}</strong><span>{overview ? 'DOCK LOADER' : detail}</span></div></div>
       <div className={`flex shrink-0 items-center gap-2 ${shortfall ? 'loader-report-sync' : ''}`}><LoaderBadge tone="green" icon="6f43b.svg">Synced</LoaderBadge><button type="button" aria-label={overview ? 'Profile: R. Perera' : 'Trip options'} onClick={() => onDialog(overview ? 'R. Perera · Dock Loader' : 'Trip options')} className={overview ? 'loader-avatar' : 'loader-header-action'}>{overview ? 'RP' : <LoaderAsset file="8514a.svg" />}</button></div>
-    </div><div className="loader-search-capsule"><form onSubmit={onSearchSubmit} className="flex min-w-0 flex-1 items-center gap-2"><DashboardIcon name="search" /><input aria-label="Search loader vehicles and stops" value={search} onChange={e => onSearchChange(e.target.value)} placeholder="Search vehicles, stops..." className="min-w-0 flex-1 bg-transparent text-xs outline-none" /><button type="submit" className="cursor-pointer text-xs font-semibold text-slate-500">Go</button></form><button type="button" aria-label="Loader notifications" onClick={() => onDialog('Notifications')} className="loader-header-action"><DashboardIcon name="bell" /></button></div></header>;
+    </div></header>
+    <div className="workspace-desktop-chrome">
+      <WorkspaceHeader className="workspace-header-compact" role="Dock Loader" href="/loader" logo={<LoaderAsset file="3ea19.svg" />} status={<LoaderBadge tone="green" icon="6f43b.svg">Synced</LoaderBadge>}
+        navigation={<nav aria-label="Desktop loader navigation">{[...nav, {label:'Status',href:'/loader/trip-status'}].map(item => <Link key={item.label} href={item.href} aria-current={active === item.label ? 'page' : undefined}>{item.label}</Link>)}</nav>}
+        search={<form onSubmit={onSearchSubmit} className="workspace-search-field"><DashboardIcon name="search" /><input aria-label="Search loader vehicles and stops" value={search} onChange={e => onSearchChange(e.target.value)} placeholder="Search vehicles, stops..." /><button type="submit">Go</button></form>}
+        actions={<><button type="button" aria-label="Loader notifications" onClick={() => onDialog('Notifications')} className="workspace-icon-button"><DashboardIcon name="bell" /></button><button type="button" aria-label="Profile: R. Perera" onClick={() => onDialog('R. Perera · Dock Loader')} className="workspace-avatar">RP</button></>}
+      />
+      {!overview && <div className="workspace-page-context"><button type="button" aria-label={shortfall ? 'Close shortfall report' : 'Back to loads'} onClick={back} className="workspace-icon-button"><LoaderAsset file={shortfall ? 'a4828.svg' : '848da.svg'} /></button><div><h2>{title}</h2><p>{detail}</p></div><button type="button" aria-label="Trip options" onClick={() => onDialog('Trip options')} className="workspace-icon-button"><LoaderAsset file="8514a.svg" /></button></div>}
+    </div>
+  </>;
 }
 
 export function LoaderShell({ children }: { children: ReactNode }) {
@@ -87,7 +99,7 @@ export function LoaderShell({ children }: { children: ReactNode }) {
     else if (/012|047|kadawatha|gampaha|058|052|041/.test(value)) router.push('/loader/load-plan');
     else setDialog('Search results');
   }
-  return <main className="loader-stage"><div className="loader-shell dashboard-shell"><div aria-hidden className="loader-backdrop" /><div className="loader-workspace"><div aria-hidden className="loader-system-bar"><span>{time}</span><div className="flex items-center gap-1.5"><span className="flex items-end gap-[2px]">{[4,6,8,11].map(height => <i key={height} style={{ height }} className="w-[3px] rounded-[1px] bg-white" />)}</span><LoaderAsset file="82919.svg" /><span className="loader-battery"><i /></span></div></div>
+  return <main className="loader-stage workspace-stage"><div className="loader-shell dashboard-shell workspace-shell"><div aria-hidden className="loader-backdrop" /><div className="loader-workspace workspace-body"><div aria-hidden className="loader-system-bar"><span>{time}</span><div className="flex items-center gap-1.5"><span className="flex items-end gap-[2px]">{[4,6,8,11].map(height => <i key={height} style={{ height }} className="w-[3px] rounded-[1px] bg-white" />)}</span><LoaderAsset file="82919.svg" /><span className="loader-battery"><i /></span></div></div>
     <LoaderHeader active={active} overview={overview} shortfall={shortfall} changes={changes} detail={detail} search={search} onSearchChange={setSearch} onSearchSubmit={submitSearch} onDialog={setDialog} />
     <div className="loader-layout"><LoaderSidebar active={active} /><div className="loader-content">{children}</div></div><LoaderNavigation active={active} /><div aria-hidden className="loader-home-indicator"><i /></div>
     <div className="loader-demo-label">Simulated workspace · sample data</div></div><LoaderFooter /></div>

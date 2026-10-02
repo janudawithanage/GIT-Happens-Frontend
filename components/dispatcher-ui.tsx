@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { WorkspaceHeader } from "./workspace-header";
+import { DashboardFooter } from "./dashboard-ui";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type ButtonHTMLAttributes, type CSSProperties, type ReactNode } from "react";
@@ -116,7 +118,7 @@ function HeaderSearch() {
     return [...orderHits, ...vehicleHits];
   }, [query, orders, vehicles]);
   return <div ref={ref} className="relative min-w-0 flex-1">
-    <label className="flex h-[43px] items-center rounded-full border border-white/90 bg-white/80 px-[13px] shadow-sm"><DIcon name="search" /><input aria-label="Search orders, trips, vehicles" value={query} onFocus={() => setOpen(true)} onChange={e => { setQuery(e.target.value); setOpen(true); }} onKeyDown={e => { if (e.key === "Enter" && results[0]) { router.push(results[0].href); setOpen(false); setQuery(""); } }} placeholder="Search orders, trips, vehicles…" className="w-full min-w-0 bg-transparent pl-[6px] text-[12px] font-medium text-[#334155] outline-none placeholder:text-[#94a3b8] sm:w-[176px]" /></label>
+    <label className="workspace-search-field"><DIcon name="search" /><input aria-label="Search orders, trips, vehicles" value={query} onFocus={() => setOpen(true)} onChange={e => { setQuery(e.target.value); setOpen(true); }} onKeyDown={e => { if (e.key === "Enter" && results[0]) { router.push(results[0].href); setOpen(false); setQuery(""); } }} placeholder="Search orders, trips, vehicles…" className="w-full min-w-0" /></label>
     {open && query.trim() && <div className="dispatcher-glass-strong absolute right-0 top-[calc(100%+8px)] z-50 w-[300px] max-w-[85vw] rounded-2xl p-2">{results.length ? results.map(r => <Link key={r.key} href={r.href} onClick={() => { setOpen(false); setQuery(""); }} className="block rounded-xl px-3 py-2 hover:bg-sky-50"><Mono className="text-[12px] font-bold text-[#0f172a]">{r.title}</Mono><span className="block truncate text-[11px] text-[#64748b]">{r.detail}</span></Link>) : <p className="px-3 py-3 text-[12px] text-[#64748b]">No orders or vehicles match “{query}”.</p>}</div>}
   </div>;
 }
@@ -145,29 +147,22 @@ function ProfileMenu() {
 
 export function DispatcherHeader() {
   const pathname = usePathname();
-  return <header className="relative z-30 flex flex-wrap items-center justify-between gap-3 pb-2 pt-6">
-    <div className="dispatcher-nav flex min-w-0 max-w-full items-center gap-2 rounded-full px-[13px] py-[7px]">
-      <Link href="/dispatcher" className="flex shrink-0 items-center gap-[10px] py-1 pr-3"><span className="relative flex size-8 items-center justify-center rounded-[12px] bg-white shadow-[0_0_0_1px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.05)]"><Image src="/figma/dispatcher/09215.png" alt="" width={30} height={30} className="rounded-[11px]" /></span><span className="hidden sm:block"><span className="block text-[15px] font-extrabold leading-[15px] tracking-[-0.375px] text-[#0f172a]">Waypoint Flow</span><span className="block pt-[2px] text-[9px] font-bold leading-[13.5px] tracking-[0.45px] text-[#64748b]">CENTRAL DISPATCH</span></span></Link>
-      <span className="h-5 w-px shrink-0 bg-[#e2e8f0]" />
-      <nav aria-label="Dispatcher" className="flex min-w-0 items-center gap-1 overflow-x-auto">{navItems.map(item => { const active = item.match(pathname); return <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`shrink-0 whitespace-nowrap rounded-full text-[13px] leading-[19.5px] ${active ? "dispatcher-accent px-5 py-2 font-semibold text-white" : "px-[14px] py-[6px] font-medium text-[#475569] hover:bg-white/70"}`}>{item.label}</Link>; })}</nav>
-    </div>
-    <div className="dispatcher-nav flex w-full items-center gap-2 rounded-full px-[11px] py-[7px] sm:w-auto"><HeaderSearch /><Notifications /><ProfileMenu /></div>
-  </header>;
+  return <WorkspaceHeader role="Central Dispatch" href="/dispatcher" accent="blue" logo={<Image src="/figma/dispatcher/09215.png" alt="" width={30} height={30} className="rounded-[11px]" />}
+    navigation={<nav aria-label="Dispatcher">{navItems.map(item => <Link key={item.href} href={item.href} aria-current={item.match(pathname) ? "page" : undefined}>{item.label}</Link>)}</nav>}
+    search={<HeaderSearch />} actions={<><Notifications /><ProfileMenu /></>}
+  />;
 }
 
 export function DispatcherFooter() {
-  return <footer className="relative z-10 mt-auto flex min-h-[46px] flex-wrap items-center justify-between gap-2 border-t border-white/70 bg-white/40 px-5 py-3 text-[11px] backdrop-blur-xl sm:px-10">
-    <div className="flex flex-wrap items-center gap-3 font-medium text-[#475569]"><span className="font-semibold text-[#0f172a]"><span className="mr-2 inline-block size-[6px] rounded-full bg-[#0ea5e9]" />Dispatcher: Active</span><span className="text-[#cbd5e1]">•</span><span>Plan Sync: 100% Up</span><span className="text-[#cbd5e1]">•</span><Mono className="text-[10px]">Depot: Peliyagoda</Mono></div>
-    <div className="dashboard-mono flex gap-4 text-[10px] text-[#475569]"><span>v4.12.0</span><span>© 2026 Waypoint Group</span></div>
-  </footer>;
+  return <DashboardFooter activityLabel="Dispatcher: Active" accent="blue" syncLabel="Plan Sync: 100% Up" locationLabel="Depot: Peliyagoda" />;
 }
 
 export function DispatcherShell({ children }: { children: ReactNode }) {
   const { toast } = useDispatcher();
-  return <main className="dashboard-stage min-h-screen px-3 py-5 text-[#0f172a] sm:p-7">
-    <div className="dashboard-shell relative mx-auto flex min-h-[calc(100vh-56px)] max-w-[1280px] flex-col overflow-hidden rounded-[38px] border border-white/95">
+  return <main className="dashboard-stage workspace-stage min-h-screen px-3 py-5 text-[#0f172a] sm:p-7">
+    <div className="dashboard-shell workspace-shell relative mx-auto flex min-h-[calc(100vh-56px)] max-w-[1280px] flex-col overflow-hidden rounded-[38px] border border-white/95">
       <div aria-hidden className="dispatcher-backdrop absolute inset-0" />
-      <div className="relative z-10 flex flex-col gap-[18px] px-4 pb-8 sm:px-7">
+      <div className="workspace-body relative z-10 flex flex-col gap-[24px] px-4 pb-8 sm:px-7">
         <DispatcherHeader />
         {children}
       </div>
