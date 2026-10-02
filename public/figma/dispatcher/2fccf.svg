@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon/wifioff" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M5.5 9.16667H5.50458M3.89583 7.53042C4.32421 7.11052 4.90015 6.87533 5.5 6.87533C6.09985 6.87533 6.67579 7.11052 7.10417 7.53042M2.29167 5.89417C2.9416 5.25704 3.7665 4.82784 4.66125 4.66125M8.70833 5.89417C8.43186 5.62403 8.12232 5.38995 7.78708 5.1975M0.916667 4.0425C1.48362 3.53435 2.13104 3.1239 2.8325 2.82792M10.0833 4.0425C9.38399 3.41746 8.56414 2.94213 7.67424 2.64576C6.78434 2.34938 5.84321 2.23824 4.90875 2.31917M0.916667 0.916667L10.0833 10.0833" stroke="#64748B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="11" height="11" fill="white"/>
+</clipPath>
+</defs>
+</svg>

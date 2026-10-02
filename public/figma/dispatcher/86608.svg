@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1132" height="488.382" viewBox="0 0 1132 488.382" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Sea &#194;&#183; Indian Ocean" clip-path="url(#clip0_0_1409)">
+<path id="Vector" d="M218.028 0C204.946 87.2111 228.493 165.701 218.028 244.191C207.562 313.96 228.493 375.008 218.028 436.055C212.795 470.94 219.772 488.382 223.26 488.382H0V0H218.028Z" fill="url(#paint0_linear_0_1409)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1409" x1="0" y1="244.191" x2="223.26" y2="244.191" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B5D4F1"/>
+<stop offset="1" stop-color="#C7DEF5"/>
+</linearGradient>
+<clipPath id="clip0_0_1409">
+<rect width="1132" height="488.382" fill="white"/>
+</clipPath>
+</defs>
+</svg>

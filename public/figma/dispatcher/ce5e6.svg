@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon/book" clip-path="url(#clip0_0_33)">
+<path id="Vector" d="M2 9.75V2.25C2 1.91848 2.1317 1.60054 2.36612 1.36612C2.60054 1.1317 2.91848 1 3.25 1H9.5C9.63261 1 9.75979 1.05268 9.85355 1.14645C9.94732 1.24021 10 1.36739 10 1.5V10.5C10 10.6326 9.94732 10.7598 9.85355 10.8536C9.75979 10.9473 9.63261 11 9.5 11H3.25C2.91848 11 2.60054 10.8683 2.36612 10.6339C2.1317 10.3995 2 10.0815 2 9.75ZM2 9.75C2 9.41848 2.1317 9.10054 2.36612 8.86612C2.60054 8.6317 2.91848 8.5 3.25 8.5H10" stroke="#64748B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_33">
+<rect width="12" height="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>
