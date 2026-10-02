@@ -24,8 +24,8 @@ export function DashboardButton({ children, tone = "light", className = "", ...p
   return <button {...props} className={`inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border px-4 py-[8px] text-[11px] font-bold shadow-sm transition hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-60 ${style} ${className}`}>{children}</button>;
 }
 
-export function DashboardPageHeading({ title, subtitle, actions }: { title: string; subtitle?: string; actions: ReactNode }) {
-  return <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
+export function DashboardPageHeading({ title, subtitle, actions, className = "" }: { title: string; subtitle?: string; actions: ReactNode; className?: string }) {
+  return <div className={`mt-4 flex flex-wrap items-start justify-between gap-3 ${className}`}>
     <div className="min-w-0">
       <div className="flex flex-wrap gap-2">
         <span className="rounded-full border border-white/75 bg-white/80 px-3 py-1 text-[10px] font-semibold"><span className="mr-1 text-emerald-500">●</span>Operational Grid Nominal</span>
@@ -39,7 +39,7 @@ export function DashboardPageHeading({ title, subtitle, actions }: { title: stri
 }
 
 export function DashboardStatCard({ title, value, detail, foot, icon, alert = false }: { title: string; value: string; detail: ReactNode; foot: ReactNode; icon: DashboardIconName; alert?: boolean }) {
-  return <article className={`dashboard-kpi flex h-[112px] min-w-0 flex-col justify-between rounded-[24px] p-4 ${alert ? "text-[#ff6b00]" : "text-[#0f172a]"}`}><div className="flex items-start justify-between gap-2"><h2 className={`pt-2 text-[11px] font-bold tracking-[.3px] ${alert ? "text-[#ff6b00]" : "text-[#64748b]"}`}>{title}</h2><span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border ${alert ? "border-orange-300/50 bg-orange-300/10" : "border-white bg-white/80"}`}><DashboardIcon name={icon} /></span></div><div className="flex min-w-0 items-end justify-between gap-1"><div className="flex min-w-0 items-baseline gap-[6px]"><strong className="text-[24px] font-bold leading-none">{value}</strong><span className={alert ? "whitespace-nowrap text-[10px]" : "truncate text-[11px]"}>{detail}</span></div><span className={alert ? "shrink-0 text-right text-[9px]" : "shrink-0 text-right text-[10px]"}>{foot}</span></div><div className={`h-[6px] w-full rounded-full ${alert ? "bg-[#ff7a1a]" : "bg-white/85"}`} /></article>;
+  return <article className={`dashboard-kpi flex h-[128px] min-w-0 flex-col justify-between rounded-[24px] p-5 ${alert ? "text-[#ff6b00]" : "text-[#0f172a]"}`}><div className="flex items-start justify-between gap-2"><h2 className={`pt-2 text-[11px] font-bold tracking-[.3px] ${alert ? "text-[#ff6b00]" : "text-[#64748b]"}`}>{title}</h2><span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border ${alert ? "border-orange-300/50 bg-orange-300/10" : "border-white bg-white/80"}`}><DashboardIcon name={icon} /></span></div><div className="flex min-w-0 items-end justify-between gap-1"><div className="flex min-w-0 items-baseline gap-[6px]"><strong className="text-[24px] font-bold leading-none">{value}</strong><span className={alert ? "whitespace-nowrap text-[10px]" : "truncate text-[11px]"}>{detail}</span></div><span className={alert ? "shrink-0 text-right text-[9px]" : "shrink-0 text-right text-[10px]"}>{foot}</span></div><div className={`h-[6px] w-full rounded-full ${alert ? "bg-[#ff7a1a]" : "bg-white/85"}`} /></article>;
 }
 
 export function DashboardFooter() {
